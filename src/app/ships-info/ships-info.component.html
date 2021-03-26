@@ -1,0 +1,13 @@
+<data-filter [timeHorizon]="20" (filterChange)="filterChange($event)"></data-filter>
+<div class="ships-container">
+    <div class="ship-card" *ngFor="let ship of shipsList">
+        <ng-container *ngIf="ship">
+            <img src="{{ship.links.mission_patch_small}}"/>
+            <span>{{ship.mission_name}} {{ship.flight_number}}</span>
+            <span>Mission Ids:<span>{{ship.mission_id || '-'}}</span></span>
+            <span>Launch Year:<span>{{ship.launch_year}}</span></span>
+            <span>Successful Launch:<span>{{ship.launch_success}}</span></span>
+            <!-- <span>Successful Landing:<span>{{ship.}}</span></span> -->
+        </ng-container>        
+    </div>
+</div>
