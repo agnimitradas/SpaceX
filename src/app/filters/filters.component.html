@@ -2,27 +2,45 @@
   <div class="launch-year">
     <div class="launch-year-header">Launch Year</div>
     <div class="launch-year-body">
-      <span
-        *ngFor="let year of launchYears"
-        (click)="addFilter({ year: year })"
-        >{{ year }}</span
-      >
+      <ng-container *ngFor="let year of launchYears">
+        <span
+          [ngClass]="{ active: currentFilters.year == year }"
+          (click)="addFilter({ year: year })"
+          >{{ year }}</span
+        >
+      </ng-container>
     </div>
   </div>
 
   <div class="success-launch">
     <div class="success-launch-header">Successful Launch</div>
     <div class="success-launch-body">
-      <span (click)="addFilter({ launchSuccess: true })">True</span>
-      <span (click)="addFilter({ launchSuccess: false })">False</span>
+      <span
+        (click)="addFilter({ launchSuccess: true })"
+        [ngClass]="{ active: currentFilters.launchSuccess == true }"
+        >True</span
+      >
+      <span
+        (click)="addFilter({ launchSuccess: false })"
+        [ngClass]="{ active: currentFilters.launchSuccess == false }"
+        >False</span
+      >
     </div>
   </div>
 
   <div class="success-land">
     <div class="success-land-header">Successful Land</div>
     <div class="success-land-body">
-      <span (click)="addFilter({ landSuccess: true })">True</span>
-      <span (click)="addFilter({ landSuccess: false })">False</span>
+      <span
+        (click)="addFilter({ landSuccess: true })"
+        [ngClass]="{ active: currentFilters.landSuccess == true }"
+        >True</span
+      >
+      <span
+        (click)="addFilter({ landSuccess: false })"
+        [ngClass]="{ active: currentFilters.landSuccess == false }"
+        >False</span
+      >
     </div>
   </div>
 </div>

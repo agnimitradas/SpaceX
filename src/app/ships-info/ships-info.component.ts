@@ -49,8 +49,8 @@ export class ShipsComponent implements OnInit {
   }) {
     let params: any = {};
     if (filter.year != null) params.launch_year = filter.year;
-    if (filter.launchSuccess != null) params.launch_success = filter.year;
-    if (filter.launchSuccess != null) params.land_success = filter.year;
+    if (filter.launchSuccess != null) params.launch_success = filter.launchSuccess;
+    if (filter.landSuccess != null) params.land_success = filter.landSuccess;
 
     this.shipsDetailsChange.next(params);
   }

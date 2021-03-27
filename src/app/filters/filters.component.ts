@@ -54,13 +54,13 @@ export class FiltersComponent implements OnInit {
       return;
     }
 
-    if (filter.year) {
+    if (filter.year != null) {
       this.setFilterAttribute("year", filter.year);
     }
-    if (filter.launchSuccess) {
+    if (filter.launchSuccess != null) {
       this.setFilterAttribute("launchSuccess", filter.launchSuccess);
     }
-    if (filter.landSuccess) {
+    if (filter.landSuccess != null) {
       this.setFilterAttribute("landSuccess", filter.landSuccess);
     }
 
@@ -73,7 +73,6 @@ export class FiltersComponent implements OnInit {
     }
     if (
       this.currentFilters &&
-      this.currentFilters[attribute] &&
       this.currentFilters[attribute] == value
     ) {
       this.currentFilters[attribute] = null;
