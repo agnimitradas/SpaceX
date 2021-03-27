@@ -1,0 +1,30 @@
+.ships-info {
+  display: flex;
+  flex-wrap: wrap;
+  .ships-container {
+    display: flex;
+    flex-flow: row wrap;
+    max-width: calc(100vw - 450px);
+    .ship-card {
+      display: flex;
+      flex-direction: column;
+      width: 300px;
+      height: 350px;
+      padding: 20px;
+      margin: 10px 10px 20px;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 8px 4px #ccc;
+      img {
+        height: 200px;
+        width: 200px;
+        margin: auto;
+      }
+      > span {
+        font-weight: 600;
+        > span {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

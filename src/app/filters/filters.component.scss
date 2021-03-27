@@ -1,0 +1,22 @@
+.filters-container {
+    max-width: 400px;
+    .launch-year,.success-launch,.success-land {
+        &-header {
+            display: flex;
+            justify-content: center;
+        }
+        &-body {
+            display: flex;
+            flex-flow: wrap;
+            >span {
+                width: 100px;
+                padding: 2px;
+                background: lightgreen;
+                margin: 5px;
+                border-radius: 3px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
